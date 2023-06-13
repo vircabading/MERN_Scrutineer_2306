@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import HomeView from './views/HomeView';
 import SubjectView from './views/SubjectView';
+import ShowSubjectDiagramView from './views/ShowSubjectDiagramView';
 
 ////////////////////////////////////////////////////
 //  ROOT APPLICATION
@@ -18,6 +19,10 @@ const App = () => {
   return (
     <BrowserRouter>
       <Switch >
+        {/* **** Show Subject Diagram View ******** */}
+        <Route path="/subject/:id/diagram">
+          <ShowSubjectDiagramView />
+        </Route>
         {/* **** Subject View ******** */}
         <Route path="/subject/:id">
           <SubjectView />
